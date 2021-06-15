@@ -8,6 +8,8 @@ namespace practicaa4.Models
          public FailContext(DbContextOptions dco) : base(dco) {
 
         }
+        public DbSet<Fotos> Foto { get; set; }
+        public DbSet<Comentario> Comenta { get; set; }
 
     }
 }
