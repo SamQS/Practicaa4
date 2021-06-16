@@ -1,1 +1,21 @@
-﻿
+﻿@model List<Fotos>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>PERU FAILS</h1>
+
+<div class="col">
+
+@foreach (var item in Model)
+{
+    <div>
+       <a href="/Comentario/Comentario" ><p>@item.TituloFoto</p></a>
+        <a href="/Comentario/Comentario"><img src="@item.Foto" class = "img-fluid"/></a>
+
+
+    </div>
+}
+
+
+</div>

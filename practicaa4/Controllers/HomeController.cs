@@ -18,28 +18,11 @@ namespace practicaa4.Controllers
             _context = context;
             _logger = logger;
         }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public IActionResult Index()
+        {
+            var fotos = _context.Foto.ToList();
+            return View(fotos);
+        }
         public IActionResult Privacy()
         {
             return View();
