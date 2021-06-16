@@ -13,13 +13,13 @@ namespace practicaa4.Controllers
             _context = context;
         }
        
-        public IActionResult Comenta() {
-            ViewBag.Fotos = _context.Foto.ToList().Select(r => new SelectListItem(r.Foto, r.Id.ToString()));
-            return View();
+        public IActionResult Comentario() {
+            var fotos = _context.Foto.ToList();
+            return View(fotos);
         }
 
         [HttpPost]
-        public IActionResult Comenta(Comentario c){
+        public IActionResult Comentario(Comentario c){
 
          if(ModelState.IsValid){
                 _context.Add(c);

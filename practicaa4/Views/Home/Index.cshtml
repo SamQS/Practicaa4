@@ -1,17 +1,24 @@
-﻿@model List<Fotos>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model List<Fotos>
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>PERU FAILS</h1>
+<hr size="35px" width="100%" align="center" color="#394665"/>
 
 <div class="col">
 
 @foreach (var item in Model)
 {
     <div>
-       <a href="/Comentario/Comentario" ><p>@item.TituloFoto</p></a>
+       <a href="/Comentario/Comentario" ><h2 class = "text-dark"  >Titulo del Fail:</h2><h2> @item.TituloFoto</h2></a>
+
+       <h2 class = "text-dark">Subido por:</h2>
         <a href="/Comentario/Comentario"><img src="@item.Foto" class = "img-fluid"/></a>
+        <hr size="35px" width="100%" align="center" color="#394665"/>
 
 
     </div>

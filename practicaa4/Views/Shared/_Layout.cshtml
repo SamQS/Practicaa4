@@ -21,9 +21,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Pagina Principal</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Foto" asp-action="Foto">Subir Fail</a>
-                        </li>
+                        
                         @if(!User.Identity.IsAuthenticated){
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="CrearCuenta">Crear Cuenta</a>
@@ -32,6 +30,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="IniciarSesion">Iniciar Sesion</a>
                         </li>
                         }else{
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Foto" asp-action="Foto">Subir Fail</a>
+                        </li>
                             <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="CerrarSesion">Cerrar Sesion</a>
                         </li>

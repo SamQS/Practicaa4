@@ -2,13 +2,12 @@
 
 
 <h1>COMENTARIOS</h1>
-
+<hr size="35px" width="100%" align="center" color="#394665"/>  
 <div class="col">
 
 @foreach (var item in Model)
 {
     <div>
-        <p>@item.TituloFoto</p>
         <img src="@item.Foto" class = "img-fluid"/>
     </div>
 }
@@ -17,9 +16,10 @@
 <form method="post">
 
 <div class="form-group">
-        <label>Ingresa tu comentario:</label>
+        <label><h2>Ingresa tu comentario:</h2></label>
         <input type = "text" name = "comentario" class = "form-control"/>
     </div>
 
+<button class = "btm btn-primary">ENVIAR COMENTARIO</button>
 
 </form>
