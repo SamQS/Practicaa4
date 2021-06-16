@@ -1,0 +1,25 @@
+@model List<Fotos>
+
+
+<h1>COMENTARIOS</h1>
+
+<div class="col">
+
+@foreach (var item in Model)
+{
+    <div>
+        <p>@item.TituloFoto</p>
+        <img src="@item.Foto" class = "img-fluid"/>
+    </div>
+}
+<hr size="35px" width="100%" align="center" color="#394665"/>  
+
+<form method="post">
+
+<div class="form-group">
+        <label>Ingresa tu comentario:</label>
+        <input type = "text" name = "comentario" class = "form-control"/>
+    </div>
+
+
+</form>

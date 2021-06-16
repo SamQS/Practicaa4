@@ -12,16 +12,33 @@ namespace practicaa4.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly FailContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
+        public HomeController(FailContext context ,ILogger<HomeController> logger) {
+            _context = context;
             _logger = logger;
         }
+    
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public IActionResult Privacy()
         {
